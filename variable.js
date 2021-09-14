@@ -3,7 +3,7 @@
 // use this for Balina Javascripts.
 'use strict';
 
-// 2. Variable 변수(변경될 수 있는 값)
+// 2. Variable 변수(변경될 수 있는 값), rw(read/write)
 // let(added in ES6) : 변수를 선언할 수 있는 유일한 수단
 let globalName = 'global name'; // 광역변수
 { //지역변수
@@ -25,13 +25,17 @@ var age;
 console.losg(age);
 let age; 
 
-// 3. Contants : 한번 선언하면 값을 변경할 수 없음 (반대 : Mutable. let 변수)
+// 3. Contant : 한번 선언하면 값을 변경할 수 없음 (반대 : Mutable. let 변수), r(only read)
+const daysInWeek = 7;
+const maxNumber= 5;
+
+// Note!
+// Immutable data types : premitive types, frozen objects (i.e. object.freeze())
+// Mutable data types : all objects by default are mutable in JS
 // favor immutable(변경할 수 없음) data type always for a few reasons :
 //  - security : 보안상의 이유 
 //  - thread safety : 동시에 정보에 접근하여 값을 변경할 때를 대비하여
 //  - reduce human mistakes : 실수 방지
-const daysInWeek = 7;
-const maxNumber= 5;
 
 // 4. Variabel types
 // primitive, single item : number, string, boolean, null, undefiedn, symbol
